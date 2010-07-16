@@ -8,7 +8,7 @@ module Snowflake
 
       # all public methods in here will be run in order
       def create_node_template
-        template "node.rb", "app/models/#{class_path}.rb"
+        template "node.rb", "app/models/#{file_path}.rb"
       end
     end
  end # module Generators
