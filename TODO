@@ -1,1 +1,2 @@
 * Integrate migration tasks (once we have a migration plugin)
+* Integrate with Rails Testing (Test::Unit and RSpec)
