@@ -1,4 +1,4 @@
-module SnowflakeRails
+module Snowflake
   module Generators
     class InstallGenerator < Rails::Generators::Base
      # namespace "snowflake:install"
@@ -15,4 +15,4 @@ module SnowflakeRails
       end
     end
   end # module Generators
-end # module SnowflakeRails
+end # module Snowflake

@@ -1,1 +1,0 @@
-SnowflakeRails.init

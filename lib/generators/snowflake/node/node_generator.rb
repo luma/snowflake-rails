@@ -1,4 +1,4 @@
-module SnowflakeRails
+module Snowflake
  module Generators
     class NodeGenerator < Rails::Generators::NamedBase
       # namespace "snowflake:node"
@@ -12,4 +12,4 @@ module SnowflakeRails
       end
     end
  end # module Generators
-end # module SnowflakeRails
+end # module Snowflake

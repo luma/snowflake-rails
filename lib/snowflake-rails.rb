@@ -8,7 +8,7 @@ require 'yaml'
 module SnowflakeRails
   def self.init( config_path = File.join(Rails.root, 'config/database.snowflake.yml') )
     @settings = File.open( config_path, 'r' ) do |f|
-                  YAML.load(f)[Rails.environment]
+                  YAML.load(f)[Rails.env]
                 end
 
     @settings[:logger] = ::Rails.logger
@@ -22,7 +22,7 @@ module SnowflakeRails
   end
 end
 
-require 'lib/snowflake-rails/version'
-require 'lib/snowflake-rails/railtie'
+require File.expand_path( '../snowflake-rails/version', __FILE__ )
+require File.expand_path( '../snowflake-rails/railtie', __FILE__ )
 
 # ActiveSupport.on_load(:active_record) { self.logger ||= ::Rails.logger }
