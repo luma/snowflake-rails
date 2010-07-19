@@ -16,7 +16,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "snowflake-rails"
 
   # If you have other dependencies, add them here
-  s.add_dependency "snowflake", ">= 0.0.1"
+  s.add_dependency "uuidtools", ">= 2.1.1"
+  s.add_dependency "snowflake", ">= 0.0.2"
+  s.add_dependency "snowflake-migration", ">= 0.0.1"
   s.add_dependency 'rails', '>= 3.0.0.beta4'
 
   # If you need to check in files that aren't .rb files, add them here

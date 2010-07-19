@@ -4,7 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 require 'snowflake'
 require 'yaml'
-'lib/snowflake-rails/'
+
 module SnowflakeRails
   def self.init( config_path = File.join(Rails.root, 'config/database.snowflake.yml') )
     @settings = File.open( config_path, 'r' ) do |f|
