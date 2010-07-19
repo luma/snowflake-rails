@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'snowflake-migration'
 
 namespace :snowflake do
   desc "Migrate the database to the latest version"
@@ -6,6 +7,8 @@ namespace :snowflake do
 
   namespace :migrate do
     task :load => :environment do
+      Snowflake::Migration.logger = nil
+
       require 'snowflake-migration/runner'
       FileList["snowflake/schema/migrations/*.rb"].each do |migration|
         load migration

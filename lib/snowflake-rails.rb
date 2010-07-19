@@ -5,6 +5,8 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'snowflake'
 require 'yaml'
 
+require 'snowflake-migration'
+
 module SnowflakeRails
   def self.init( config_path = File.join(Rails.root, 'config/database.snowflake.yml') )
     @settings = File.open( config_path, 'r' ) do |f|
@@ -13,6 +15,7 @@ module SnowflakeRails
 
     @settings[:logger] = ::Rails.logger
     Snowflake.connect( @settings )
+
   end
 
   class Railtie < Rails::Railtie
@@ -25,4 +28,6 @@ end
 require File.expand_path( '../snowflake-rails/version', __FILE__ )
 require File.expand_path( '../snowflake-rails/railtie', __FILE__ )
 
-# ActiveSupport.on_load(:active_record) { self.logger ||= ::Rails.logger }
+# ActiveSupport.on_load(:after_initialize) do
+#   Snowflake::Migration.logger = ::Rails.logger
+# end

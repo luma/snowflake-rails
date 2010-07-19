@@ -1,10 +1,10 @@
-begin
-  require 'spec'
-rescue LoadError
-  require 'rubygems' unless ENV['NO_RUBYGEMS']
-  gem 'rspec'
-  require 'spec'
-end
+require "bundler"
+Bundler.setup
 
-$:.unshift(File.dirname(__FILE__) + '/../lib')
-require 'snowflake-rails'
+require "spec"
+require "snowflake"
+require "snowflake-rails"
+
+Spec::Runner.configure do |config|
+  config.mock_with :mocha
+end

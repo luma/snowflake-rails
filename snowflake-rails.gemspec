@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "uuidtools", ">= 2.1.1"
   s.add_dependency "snowflake", ">= 0.0.2"
   s.add_dependency "snowflake-migration", ">= 0.0.1"
-  s.add_dependency 'rails', '>= 3.0.0.beta4'
+  s.add_dependency 'railties', '>= 3.0.0.beta4'
+  s.add_dependency 'activesupport', '>= 3.0.0.beta4'
 
   # If you need to check in files that aren't .rb files, add them here
   s.files        = Dir["{lib}/snowflake-rails.rb", "{lib}/snowflake-rails/version.rb", "{lib}/snowflake-rails/railtie.rb", "{lib}/snowflake-rails/**/*.rb", "{lib}/generators/snowflake/**/*.rb", "bin/*", "LICENSE", "*.md", "README.rdoc", "init.rb", "{lib}/generators/snowflake/install/templates/database.yml", "{lib}/snowflake-rails/railties/databases.rake"]
