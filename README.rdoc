@@ -1,14 +1,16 @@
 = snowflake-rails
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/luma/snowflake-rails
 
 == DESCRIPTION:
 
-FIX (describe your package)
+This gem allows Snowflake (http://github.com/luma/snowflake) to be used with Rails3. It's assumed that you'll be using Snowflake _as well as_ a RDBMS (or other DB), so snowflake-rails doesn't set itself it up the primary ORM.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* allows you to use Snowflake from your Rails3 app, yay!
+* provides several generators to make your life easier;
+* sends out good healing vibrations through the ether. 
 
 == SYNOPSIS:
 
@@ -16,11 +18,25 @@ FIX (describe your package)
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* bundler
+* uuidtools >= 2.1.1
+* snowflake >= 0.0.2
+* snowflake-migration >= 0.0.1
+* Rails >= 3.0.0.beta4
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+  gem install snowflake-rails
+
+Then, from within a new Rails3 app. Add the following to your Gemfile:
+
+	gem "snowflake", '>= 0.0.3'
+	gem "snowflake-rails", '>= 0.0.2'
+	
+Then run the setup generator:
+	rails g snowflake:install
+
+There is also generators for creating Snowflake models and migrations, and a Rake task for running Snowflake migrations.
 
 == LICENSE:
 
