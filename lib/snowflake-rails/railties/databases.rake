@@ -7,8 +7,6 @@ namespace :snowflake do
 
   namespace :migrate do
     task :load => :environment do
-      Snowflake::Migration.logger = nil
-
       require 'snowflake-migration/runner'
       FileList["snowflake/schema/migrations/*.rb"].each do |migration|
         load migration
