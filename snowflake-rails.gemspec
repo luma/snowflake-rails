@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   # If you have other dependencies, add them here
   s.add_dependency "uuidtools", "~> 2.1.1"
-  s.add_dependency "snowflake", "~> 0.2.12"
+  s.add_dependency "snowflake", "~> 0.2.14"
   s.add_dependency "snowflake-migration", "~> 0.1.0"
   s.add_dependency 'railties', '~> 3.0.0'
   s.add_dependency 'activesupport', '~> 3.0.0'
